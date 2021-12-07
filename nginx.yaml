@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
  name: nginx
 spec:
+ updateStrategy:
+  type: RollingUpdate
  selector:
   matchLabels:
    app: web_server
